@@ -48,7 +48,7 @@ const AboutSection = () => {
               I have many hobbies from playing sports such as Table Tennis and
               Basketball, to participating in Competive Programming at ICPC
               competetions. I also love reading, hearing to music and traveling
-              since Ive been young. I'm always trying to learn new things and
+              since Ive been young. I am always trying to learn new things and
               seeking experiences that put me out of my comfort zone.
             </p>
             <br />
