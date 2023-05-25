@@ -12,6 +12,15 @@ const projects = [
     image: "/RegalRexnordImage.jpg",
     github: "https://github.com/WatchMakker/Construccion_software_proyecto",
     link: "https://miscompetenciastec21.tec.mx/elumen/portfolio/RO8nmDQuQO4oUwewzq",
+    skills: [
+      { skill: "HTML" },
+      { skill: "CSS" },
+      { skill: "React" },
+      { skill: "Unity2D" },
+      { skill: "Django" }, 
+      { skill: "C#" }, 
+      { skill: "PostgreSQL" }, 
+    ]
   },
   {
     name: "Expense Tracker",
@@ -19,6 +28,11 @@ const projects = [
     image: "/ExpenseTrackerImage.jpg",
     github: "https://github.com/Jdanielcode1/Expense_Tracker",
     link: "",
+    skills: [
+      { skill: "HTML" },
+      { skill: "CSS" },
+      { skill: "React" },
+    ]
   },
   {
     name: "Math test for Elementary Students",
@@ -27,6 +41,9 @@ const projects = [
     image: "/MathTestImage.png",
     github: "",
     link: "https://miscompetenciastec21.tec.mx/elumen/portfolio/OYXbAONC0BnkCV8dw",
+    skills: [
+      { skill: "Python" },
+    ]
   },
 ]
 
@@ -60,7 +77,19 @@ const ProjectsSection = () => {
                     <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
                       {project.description}
                     </p>
-                    <div className="flex flex-row align-bottom space-x-4">
+                    <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
+                      {project.skills.map((item, idx) => {
+                        return (
+                          <p
+                            key={idx}
+                            className="bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold"
+                          >
+                            {item.skill}
+                          </p>
+                        );
+                      })}
+                    </div>
+                    <div className="flex flex-row align-bottom space-x-4 mt-5">
                       <Link href={project.github} target="_blank">
                         <BsGithub
                           size={30}
@@ -80,10 +109,8 @@ const ProjectsSection = () => {
             </div>
           )
         })}
-        
       </div>
     </section>
-  )
-}
-
+  );
+};
 export default ProjectsSection
