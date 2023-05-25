@@ -17,7 +17,7 @@ const Resume = () => {
         rel="noopener noreferrer" 
         className="flex items-center text-blue-500 hover:underline"
       >
-        Open Resume <FaLink className="ml-2" />
+        Open my Resume <FaLink className="ml-2" />
       </a>
     </div>
     </section>
