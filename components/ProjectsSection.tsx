@@ -9,7 +9,7 @@ const projects = [
     name: "Regal Rexnord Risk Learning Website",
     description:
       "We worked with Regal Rexnord to make a website that teaches employees about risks in the workplace with Unity 2D Games .",
-    image: "/RegalRexnordImage.jpg",
+    image: "/RegalRexnordImage.png",
     github: "https://github.com/WatchMakker/Construccion_software_proyecto",
     link: "https://miscompetenciastec21.tec.mx/elumen/portfolio/RO8nmDQuQO4oUwewzq",
     skills: [
@@ -25,7 +25,7 @@ const projects = [
   {
     name: "Expense Tracker",
     description: "This Expense Tracker lets you add expenses with date and amount to a list and visualizes the expenses by month in a bar graph.",
-    image: "/ExpenseTrackerImage.jpg",
+    image: "/ExpenseTrackerImage.png",
     github: "https://github.com/Jdanielcode1/Expense_Tracker",
     link: "",
     skills: [
