@@ -2,7 +2,7 @@ import React from 'react';
 import { FaFileAlt, FaLink } from 'react-icons/fa';
 
 const Resume = () => {
-  const resumeUrl = 'http://link-to-your-resume.com'; // replace with your resume link
+  const resumeUrl = 'https://docs.google.com/document/d/1fARAkZEihFyhaO5RhNy06450LM5zl6ok/edit?usp=share_link&ouid=104673918223840784147&rtpof=true&sd=true'; // replace with your resume link
 
   return (
     <section id="resume" className="mb-10">
