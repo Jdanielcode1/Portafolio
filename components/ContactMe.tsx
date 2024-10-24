@@ -18,7 +18,7 @@ const ContactMe = () => {
             
             {/* LinkedIn */}
             <a 
-              href="https://www.linkedin.com/in/your-profile"
+              href="https://www.linkedin.com/in/jos%C3%A9-daniel-cant%C3%BA-cant%C3%BA-8a5910242"
               target="_blank"
               rel="noreferrer"
               className="flex items-center space-x-4 hover:text-teal-500 transition-colors duration-300 w-full max-w-md"
