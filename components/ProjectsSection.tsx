@@ -5,6 +5,22 @@ import SlideUp from "./SlideUp";
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
 import PortfolioVideo from "./PortafolioVideo";
 
+interface Skill {
+  skill: string;
+}
+
+interface Project {
+  name: string;
+  description: string | string[];
+  image?: string;  // Make image optional
+  video?: string;  // Make video optional
+  showVideo?: boolean;
+  github: string;
+  link: string;
+  skills: Skill[];
+}
+
+
 const projects = [
 
   {
@@ -194,19 +210,19 @@ const ProjectsSection = () => {
                             Your browser does not support the video tag.
                           </video>
                         </div>
-                      ) : (
+                      ) : project.image ? (  
                         <Image
                           src={project.image}
-                          alt=""
+                          alt={project.name}  
                           width={1000}
                           height={1000}
                           className="rounded-xl shadow-xl hover:opacity-70 w-full"
                         />
-                      )}
+                      ) : null}  
                     </Link>
                   </div>
 
-                  {/* Content Container */}
+                  {/* Rest of your component remains the same */}
                   <div className="text-center w-full">
                     <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
                     {Array.isArray(project.description) ? (
@@ -225,32 +241,24 @@ const ProjectsSection = () => {
                       </p>
                     )}
 
-                    {/* Skills Container */}
                     <div className="flex flex-wrap justify-center gap-2 mb-6">
-                      {project.skills.map((item, idx) => {
-                        return (
-                          <p
-                            key={idx}
-                            className="bg-gray-200 px-4 py-2 text-gray-500 rounded font-semibold">
-                            {item.skill}
-                          </p>
-                        );
-                      })}
+                      {project.skills.map((item, idx) => (
+                        <p
+                          key={idx}
+                          className="bg-gray-200 px-4 py-2 text-gray-500 rounded font-semibold">
+                          {item.skill}
+                        </p>
+                      ))}
                     </div>
 
-                    {/* Links Container */}
                     <div className="flex justify-center space-x-4">
-                      <Link
-                        href={project.github}
-                        target="_blank">
+                      <Link href={project.github} target="_blank">
                         <BsGithub
                           size={30}
                           className="hover:-translate-y-1 transition-transform cursor-pointer"
                         />
                       </Link>
-                      <Link
-                        href={project.link}
-                        target="_blank">
+                      <Link href={project.link} target="_blank">
                         <BsArrowUpRightSquare
                           size={30}
                           className="hover:-translate-y-1 transition-transform cursor-pointer"
