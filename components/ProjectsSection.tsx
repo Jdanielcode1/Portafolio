@@ -1,23 +1,22 @@
-import React from "react"
-import Image from "next/image"
-import Link from "next/link"
-import SlideUp from "./SlideUp"
-import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
+import React from "react";
+import Image from "next/image";
+import Link from "next/link";
+import SlideUp from "./SlideUp";
+import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
+import PortfolioVideo from "./PortafolioVideo";
 
 const projects = [
-
-
-
 
   {
     name: "Spatial Computing learning Platform for Medical Students",
     description: [
-        "Developed an innovative VisionOS application for medical students, featuring 3D organ visualization and interactive quizzes.",
-        "Utilized Swift, SwiftUI, RealityKit, and ARKit, with a MySQL backend and RESTful API for efficient data management.",
-        "Collaborated with a multidisciplinary team to ensure accuracy and educational value.",
-        "Presented the project at the computer science program's 50th anniversary, demonstrating its potential impact on medical education."
-      ],
-    image: "/VisionPro.png",
+      "Developed an innovative VisionOS application for medical students, featuring 3D organ visualization and interactive quizzes.",
+      "Utilized Swift, SwiftUI, RealityKit, and ARKit, with a MySQL backend and RESTful API for efficient data management.",
+      "Collaborated with a multidisciplinary team to ensure accuracy and educational value.",
+      "Presented the project at the computer science program's 50th anniversary, demonstrating its potential impact on medical education.",
+    ],
+    video: "/vision_doc_vid.mp4", // Add this line
+    showVideo: true, // Add this line
     github: "https://github.com/EugenioPedraza/VisionDoc",
     link: "https://www.youtube.com/watch?v=tR1tP5SS5fU",
     skills: [
@@ -27,42 +26,111 @@ const projects = [
       { skill: "ARKit" },
       { skill: "MySQL Server" },
       { skill: "Oracle Cloud Infrastructure" },
-    ]
+    ],
+  },
+  {
+    name: "AI-Powered Presales Management Platform (Neoris)",
+    description: [
+      "Developed a full-stack AI solution to streamline presales software workflows, leveraging PostgreSQL, Supabase, Langchain, and vector embeddings with pg_vector for RAG (Retrieval-Augmented Generation), integrated with Ollama for LLMs.",
+      "Built a robust frontend using Next.js and TypeScript, while focusing on advanced backend engineering with PostgreSQL, including procedures, triggers, RLS, and Supabase Storage for file management.",
+      "Collaborated within an Agile team to enhance performance and security, actively participating in sprint planning, iterative development, and team reviews. Integrated Microsoft Teams API for seamless collaboration.",
+    ],
+    image: "/neorisPhoto.png", // You'll need to replace this with the actual image path
+    github: "https://github.com/CaarloosDC/Softie", // Replace with actual GitHub link if available
+    link: "", // Replace with actual project link
+    skills: [
+      { skill: "Next.js" },
+      { skill: "TypeScript" },
+      { skill: "PostgreSQL" },
+      { skill: "Supabase" },
+      { skill: "Langchain" },
+      { skill: "RAG" },
+      { skill: "Ollama" },
+      { skill: "Agile Development" },
+      { skill: "Microsoft Teams API" },
+    ],
+  },
+
+
+  {
+    name: "Video Processing Cloud Platform (YouTube Clone)",
+    description: [
+      "Engineered a scalable video processing platform using Google Cloud services, implementing a microservices architecture with Cloud Storage, Pub/Sub, and Cloud Run for video handling and transcoding.",
+      "Developed a responsive frontend using Next.js and TypeScript, integrated with Firebase Authentication for secure user management, and implemented Docker containerization for consistent deployment.",
+      "Built an event-driven video processing pipeline using FFmpeg for transcoding, Cloud Pub/Sub for message queuing, and Firestore for metadata management, ensuring reliable video processing and delivery.",
+    ],
+    image: "/yt_clone_logo2.png", // Add your project screenshot
+    github: "https://github.com/Jdanielcode1/Video-Processing-WebAPP-GC",
+    link: "", // Add if you have a live demo
+    skills: [
+      { skill: "Next.js" },
+      { skill: "TypeScript" },
+      { skill: "Google Cloud Platform" },
+      { skill: "Cloud Run" },
+      { skill: "Cloud Storage" },
+      { skill: "Cloud Pub/Sub" },
+      { skill: "Firebase" },
+      { skill: "Docker" },
+      { skill: "FFmpeg" },
+      { skill: "Express.js" },
+      { skill: "Microservices" },
+      { skill: "Event-Driven Architecture" },
+    ],
+  },
+
+
+
+  {
+    name: "Github Issues Clone",
+    description: [
+      "Created a Fullstack Github Issues Clone using NextJS 14, Supabase with PostgreSQL as a Backend Service utilizing, added realtime commments, AI semantic search for tickets, added file storage for view images with previews, multitenancy for different tenants, implemented Row Level Security to ensure data safety",
+    ],
+    video: "/Better_video.mp4", // Add this line
+    showVideo: true, // Add this line
+    github: "https://github.com/Jdanielcode1/Expense_Tracker",
+    link: "",
+    skills: [{ skill: "Next.js" },
+      { skill: "TypeScript" },
+      { skill: "PostgreSQL" },
+      { skill: "Supabase" },
+      { skill: "Semantic Search" },
+      { skill: "OpenAI API"}],
   },
 
   {
-    name: "Order Managmennt System (Subsidine)",
+    name: "Order Management System (Subsidine)",
     description: [
       "Developed a multi-tenant order management SaaS platform for food service providers, reducing order processing time by 75% and eliminating 95% of errors from lost physical tickets.",
       "Implemented a full-stack solution using NextJS, JavaScript, Supabase, PostgreSQL, and PostgREST, with realtime functionality for ticket creation and responsive design for cross-device compatibility.",
       "Utilized Vercel and GitHub Actions for CI/CD, demonstrating expertise in modern web development, database management, and DevOps practices for a scalable SaaS startup.",
     ],
-    image: "/VisionPro.png",
+    image: "/subsidine_pic.png",
     github: "https://github.com/EugenioPedraza/VisionDoc",
     link: "https://www.youtube.com/watch?v=tR1tP5SS5fU",
     skills: [
-      { skill: "VisionOS" },
-      { skill: "SwiftUI" },
-      { skill: "Swift" },
-      { skill: "ARKit" },
-      { skill: "MySQL Server" },
-      { skill: "Oracle Cloud Infrastructure" },
-    ]
+      { skill: "Next.js" },
+      { skill: "TypeScript" },
+      { skill: "PostgreSQL" },
+      { skill: "Supabase" },
+    ],
   },
 
   {
     name: "Traffic Simulation to improve local traffic ",
-    description:
-    "Bu",
+    description: [
+      "Developed an advanced traffic simulation system using Python and Unity, combining data analysis with 3D visualization to model urban traffic patterns and optimize flow efficiency in real-time.",
+      "Implemented AI-driven vehicle behavior and pathfinding algorithms in C#, along with Matplotlib visualizations for traffic density analysis, resulting in actionable insights for reducing congestion and improving traffic management",
+    ],
     image: "/multiphoto.png",
     github: "https://github.com/EugenioPedraza/MultiAgentesUnity",
     link: "https://www.youtube.com/watch?v=hU_7ieUsnwY&t=4s&ab_channel=DiegoEmilioRodr%C3%ADguezOrozco",
     skills: [
       { skill: "Python" },
+      { skill: "Matplotlib" },
       { skill: "Unity" },
       { skill: "C#" },
       { skill: "Rest API" },
-    ]
+    ],
   },
   {
     name: "Regal Rexnord Risk Learning Website",
@@ -76,56 +144,23 @@ const projects = [
       { skill: "CSS" },
       { skill: "React" },
       { skill: "Unity2D" },
-      { skill: "Django" }, 
-      { skill: "C#" }, 
-      { skill: "PostgreSQL" }, 
-    ]
+      { skill: "Django" },
+      { skill: "C#" },
+      { skill: "PostgreSQL" },
+    ],
   },
   {
     name: "Expense Tracker",
-    description: ["This Expense Tracker lets you add expenses with date and amount to a list and visualizes the expenses by month in a bar graph."],
-    image: "/ExpenseTrackerImage.png",
-    github: "https://github.com/Jdanielcode1/Expense_Tracker",
-    link: "",
-    skills: [
-      { skill: "HTML" },
-      { skill: "CSS" },
-      { skill: "React" },
-    ]
-  },
-
-  {
-    name: "Jira Clone NextJS and Supabase",
-    description: ["Created a Fullstack Jira Like Clone with using NextJS 14, Supabase with PostgreSQL as a Backend Service utilizing, added realtime commments, AI semantic search for tickets, added file storage for view images with previews, multitenancy for different tenants, implemented Row Level Security to ensure data safety"],
-    image: "/ExpenseTrackerImage.png",
-    github: "https://github.com/Jdanielcode1/Expense_Tracker",
-    link: "",
-    skills: [
-      { skill: "HTML" },
-      { skill: "CSS" },
-      { skill: "React" },
-    ]
-  },
-
-
-
-
-
-
-
-  {
-    name: "Math test for Elementary Students",
-    description:[
-      "In my python class we built a simple program that tests students in their math skills for learning purposes.",
+    description: [
+      "A dynamic expense tracking app that helps users monitor their finances through intuitive data input and interactive bar graph visualizations. Features include monthly expense breakdowns, customizable date filtering, and spending pattern analysis.",
+      "Built with React hooks for state management and Chart.js for data visualization, focusing on responsive design and user experience.",
     ],
-    image: "/MathTestImage.png",
-    github: "",
-    link: "https://miscompetenciastec21.tec.mx/elumen/portfolio/OYXbAONC0BnkCV8dw",
-    skills: [
-      { skill: "Python" },
-    ]
+    image: "/ExpenseTrackerImage.png",
+    github: "https://github.com/Jdanielcode1/Expense_Tracker",
+    link: "",
+    skills: [{ skill: "HTML" }, { skill: "CSS" }, { skill: "React" }],
   },
-]
+];
 
 const ProjectsSection = () => {
   return (
@@ -140,51 +175,82 @@ const ProjectsSection = () => {
           return (
             <div key={idx}>
               <SlideUp offset="-300px 0px -300px 0px">
-                <div className="flex flex-col animate-slideUpCubiBezier animation-delay-2 md:flex-row md:space-x-12">
-                  <div className="md:w-1/2">
+                <div className="flex flex-col items-center max-w-4xl mx-auto">
+                  {/* Media Container */}
+                  <div className="w-full mb-8">
                     <Link href={project.link}>
-                      <Image
-                        src={project.image}
-                        alt=""
-                        width={1000}
-                        height={1000}
-                        className="rounded-xl shadow-xl hover:opacity-70"
-                      />
+                      {project.showVideo && project.video ? (
+                        <div className="aspect-video w-full max-w-4xl mx-auto">
+                          <video
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            className="rounded-xl shadow-xl hover:opacity-70 w-full h-full object-contain">
+                            <source
+                              src={project.video}
+                              type="video/mp4"
+                            />
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                      ) : (
+                        <Image
+                          src={project.image}
+                          alt=""
+                          width={1000}
+                          height={1000}
+                          className="rounded-xl shadow-xl hover:opacity-70 w-full"
+                        />
+                      )}
                     </Link>
                   </div>
-                  <div className="mt-8 md:w-1/2">
+
+                  {/* Content Container */}
+                  <div className="text-center w-full">
                     <h1 className="text-4xl font-bold mb-6">{project.name}</h1>
                     {Array.isArray(project.description) ? (
-                      <ul className="list-disc list-inside mb-4 text-neutral-600 dark:text-neutral-400">
+                      <ul className="list-disc list-inside mb-4 text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
                         {project.description.map((bullet, index) => (
-                          <li key={index} className="text-xl leading-7 mb-2">{bullet}</li>
+                          <li
+                            key={index}
+                            className="text-xl leading-7 mb-2 text-left">
+                            {bullet}
+                          </li>
                         ))}
                       </ul>
                     ) : (
-                      <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400">
+                      <p className="text-xl leading-7 mb-4 text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
                         {project.description}
                       </p>
                     )}
-                    <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
+
+                    {/* Skills Container */}
+                    <div className="flex flex-wrap justify-center gap-2 mb-6">
                       {project.skills.map((item, idx) => {
                         return (
                           <p
                             key={idx}
-                            className="bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold"
-                          >
+                            className="bg-gray-200 px-4 py-2 text-gray-500 rounded font-semibold">
                             {item.skill}
                           </p>
                         );
                       })}
                     </div>
-                    <div className="flex flex-row align-bottom space-x-4 mt-5">
-                      <Link href={project.github} target="_blank">
+
+                    {/* Links Container */}
+                    <div className="flex justify-center space-x-4">
+                      <Link
+                        href={project.github}
+                        target="_blank">
                         <BsGithub
                           size={30}
                           className="hover:-translate-y-1 transition-transform cursor-pointer"
                         />
                       </Link>
-                      <Link href={project.link} target="_blank">
+                      <Link
+                        href={project.link}
+                        target="_blank">
                         <BsArrowUpRightSquare
                           size={30}
                           className="hover:-translate-y-1 transition-transform cursor-pointer"
@@ -195,11 +261,11 @@ const ProjectsSection = () => {
                 </div>
               </SlideUp>
             </div>
-          )
+          );
         })}
       </div>
     </section>
   );
 };
 
-export default ProjectsSection
+export default ProjectsSection;

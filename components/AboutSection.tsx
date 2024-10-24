@@ -1,24 +1,30 @@
+
 import React from "react"
 import Image from "next/image"
 
 const skills = [
+  // Core Skills
   { skill: "JavaScript" },
   { skill: "TypeScript" },
-  { skill: "PostgreSQL" },
-  { skill: "Supabase" },
-  { skill: "HTML" },
-  { skill: "CSS" },
-  { skill: "C++" },
   { skill: "Python" },
   { skill: "React" },
   { skill: "Next.js" },
-  { skill: "C++" },
-  { skill: "Tailwind CSS" },
-  { skill: "ShadCn" },
+  { skill: "Swift" },
+  { skill: "PostgreSQL" },
+  { skill: "Supabase" },
+  { skill: "Firebase" },
+  { skill: "HTML" },
+  { skill: "CSS" },
+  { skill: "Tailwind" },
+  { skill: "Docker" },
   { skill: "Git" },
-  { skill: "GitHub" },
-  { skill: "C#" },
-]
+  { skill: "Google Cloud" },
+  { skill: "Vercel" },
+  { skill: "OpenAI API" },
+  { skill: "C++" },
+  { skill: "SwiftUI" },
+  { skill: "Express.js" }
+];
 
 const AboutSection = () => {
   return (
@@ -30,36 +36,39 @@ const AboutSection = () => {
         </h1>
 
         <div className="flex flex-col space-y-10 items-stretch justify-center align-top md:space-x-10 md:space-y-0 md:p-4 md:flex-row md:text-left">
-          <div className="md:w-1/2 ">
+          <div className="md:w-1/2">
             <h1 className="text-center text-2xl font-bold mb-6 md:text-left">
               Get to know me!
             </h1>
             <p>
-              Hi, my name is Daniel and I am a{" "}
-              <span className="font-bold">{"highly ambitious"}</span>,
-              <span className="font-bold">{" self-motivated"}</span>, and
-              <span className="font-bold">{" driven"}</span> CS student @
-              Tecnologico de Monterrey Campus MTY
+              Hey! 👋 I'm a Computer Science student at Tec de Monterrey who loves building 
+              things that make people's lives easier. Next spring, I'll be heading to Berkeley 
+              for a semester, which I'm super stoked about!
             </p>
             <br />
             <p>
-              I am currently enrolled in the BS Computer Science Program at
-              Tecnologico de Monterrey University Campus Monterrey, I am
-              currently in my 3rd Semester, coursing Data Structures and
-              Algorithms and Interconextion of devices.
+              I'm currently running my own project called Subsidine - it's a platform that 
+              helps manage food service orders (basically making sure people get their lunch 
+              on time! 🍽️). I'm also really into AI and have been working on some cool 
+              projects at Neoris using the latest tech.
             </p>
             <br />
             <p>
-              I have many hobbies from playing sports such as Table Tennis and
-              Basketball, to participating in Competive Programming at ICPC
-              competetions. I also love reading, hearing to music and traveling
-              since Ive been young. I am always trying to learn new things and
-              seeking experiences that put me out of my comfort zone.
+              When I'm not coding, you can find me playing table tennis, getting lost in 
+              interesting podcasts, or reading about new tech. Always up for learning new 
+              things and meeting fellow developers!
+            </p>
+            <br />
+            <br />
+            <br />
+            <p className="bg-gradient-to-r from-teal-500 to-teal-400 text-white px-4 py-2 rounded-md inline-block hover:from-teal-600 hover:to-teal-500 transition-all duration-200">
+              🚀 Currently seeking Summer 2025 technical internships 
+                Let's build something amazing together!
             </p>
             <br />
           </div>
           <div className="text-center md:w-1/2 md:text-left">
-            <h1 className="text-2xl font-bold mb-6">My Skills</h1>
+            <h1 className="text-2xl font-bold mb-6">My Tech Stack</h1>
             <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
               {skills.map((item, idx) => {
                 return (
@@ -69,16 +78,12 @@ const AboutSection = () => {
                   >
                     {item.skill}
                   </p>
-                  
                 );
               })}
-                <div className="hidden md:block md:relative md:-bottom-10 md:left-15 md:z-0">
-            <Image src="/programmer1.svg" alt="" width={700} height={500} />
-          </div>
+              <div className="hidden md:block md:relative md:-bottom-10 md:left-15 md:z-0">
+                <Image src="/programmer1.svg" alt="" width={700} height={500} />
+              </div>
             </div>
-          </div>
-          <div>
-           
           </div>
         </div>
       </div>
