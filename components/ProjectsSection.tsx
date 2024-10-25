@@ -115,7 +115,7 @@ const projects = [
   {
     name: "Regal Rexnord Risk Learning Website",
     description:
-      "We worked with Regal Rexnord to make a website that teaches employees about risks in the workplace with Unity 2D Games .",
+      "Developed a workplace safety training platform featuring Unity/C# educational games integrated with a React/Material-UI analytics dashboard, utilizing Django backend for user authentication and game metrics processing.",
     image: "/RegalRexnordImage.png",
     github: "https://github.com/Jdanielcode1/regal_rexnord_project",
     link: "https://miscompetenciastec21.tec.mx/elumen/portfolio/RO8nmDQuQO4oUwewzq",
