@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import SlideUp from "./SlideUp";
 import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs";
-import PortfolioVideo from "./PortafolioVideo";
+
 
 interface Skill {
   skill: string;
@@ -112,7 +112,22 @@ const projects = [
       { skill: "Semantic Search" },
       { skill: "OpenAI API"}],
   },
-
+  {
+    name: "Regal Rexnord Risk Learning Website",
+    description:
+      "We worked with Regal Rexnord to make a website that teaches employees about risks in the workplace with Unity 2D Games .",
+    image: "/RegalRexnordImage.png",
+    github: "https://github.com/Jdanielcode1/regal_rexnord_project",
+    link: "https://miscompetenciastec21.tec.mx/elumen/portfolio/RO8nmDQuQO4oUwewzq",
+    skills: [
+      { skill: "React" },
+      { skill: "Django" },
+      { skill: "MaterialUI" },
+      { skill: "CSS" },
+      { skill: "Unity2D" },
+      { skill: "C#" },
+    ],
+  },
   {
     name: "Order Management System (Subsidine)",
     description: [
@@ -148,23 +163,7 @@ const projects = [
       { skill: "Rest API" },
     ],
   },
-  {
-    name: "Regal Rexnord Risk Learning Website",
-    description:
-      "We worked with Regal Rexnord to make a website that teaches employees about risks in the workplace with Unity 2D Games .",
-    image: "/RegalRexnordImage.png",
-    github: "https://github.com/WatchMakker/Construccion_software_proyecto",
-    link: "https://miscompetenciastec21.tec.mx/elumen/portfolio/RO8nmDQuQO4oUwewzq",
-    skills: [
-      { skill: "HTML" },
-      { skill: "CSS" },
-      { skill: "React" },
-      { skill: "Unity2D" },
-      { skill: "Django" },
-      { skill: "C#" },
-      { skill: "PostgreSQL" },
-    ],
-  },
+
   {
     name: "Expense Tracker",
     description: [
