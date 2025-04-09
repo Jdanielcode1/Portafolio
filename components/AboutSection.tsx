@@ -21,10 +21,12 @@ const skills = [
   { skill: "Git" },
   { skill: "Google Cloud" },
   { skill: "Vercel" },
-  { skill: "OpenAI API" },
+  { skill: "React Native" },
+  { skill: "Expo" },
   { skill: "C++" },
   { skill: "SwiftUI" },
   { skill: "Express.js" }
+
 ];
 
 const AboutSection = () => {
@@ -42,17 +44,12 @@ const AboutSection = () => {
               Get to know me!
             </h1>
             <p>
-              Hey! 👋 I'm a Computer Science student at Tec de Monterrey who loves building 
-              things that make people's lives easier. Next spring, I'll be heading to Berkeley 
-              for a semester, which I'm super stoked about!
+              I'm a Computer Science student at UC Berkeley who loves building 
+              things that make people's lives easier. I'm passionate about creating 
+              innovative solutions and exploring new technologies.
             </p>
             <br />
-            <p>
-              I'm currently running my own project called Subsidine - it's a platform that 
-              helps manage food service orders (basically making sure people get their lunch 
-              on time! 🍽️). I'm also really into AI and have been working on some cool 
-              projects at Neoris using the latest tech.
-            </p>
+
             <br />
             <p>
               When I'm not coding, you can find me playing table tennis, getting lost in 
@@ -62,10 +59,7 @@ const AboutSection = () => {
             <br />
             <br />
             <br />
-            <p className="bg-gradient-to-r from-teal-500 to-teal-400 text-white px-4 py-2 rounded-md inline-block hover:from-teal-600 hover:to-teal-500 transition-all duration-200">
-              🚀 Currently seeking Summer 2025 technical internships 
-                Let's build something amazing together!
-            </p>
+   
             <br />
           </div>
           <div className="text-center md:w-1/2 md:text-left">

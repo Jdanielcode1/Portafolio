@@ -6,7 +6,7 @@ interface PortfolioVideoProps {
 
 const PortfolioVideo: React.FC<PortfolioVideoProps> = ({ src }) => {
   return (
-    <div className="w-full aspect-video relative">
+    <div className="max-w-5xl mx-auto aspect-video relative">
       <video 
         autoPlay 
         muted 

@@ -64,7 +64,7 @@ const HeroSection = () => {
               sequence={[
                 // Wait for previous animations
                 3000,
-                " based in Tecnologico de Monterrey. Learning and creating software to make peoples life better.",
+                " based in Berkeley. Learning and creating software to make peoples life better.",
                 1000,
               ]}
               wrapper="span"

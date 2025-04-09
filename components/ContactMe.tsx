@@ -37,7 +37,7 @@ const ContactMe = () => {
               <div className="bg-gray-200 p-4 rounded-full dark:bg-stone-600">
                 <MdEmail size={25} />
               </div>
-              <span className="font-semibold text-lg">A01284664@tec.mx</span>
+              <span className="font-semibold text-lg">josedaniel.cantu@berkeley.edu</span>
             </a>
 
             {/* Additional Contact Info */}

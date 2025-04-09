@@ -12,8 +12,9 @@ interface Skill {
 interface Project {
   name: string;
   description: string | string[];
-  image?: string;  // Make image optional
-  video?: string;  // Make video optional
+  image?: string;
+  videos?: string[];  // New field for multiple videos
+  video?: string;     // Keep for backwards compatibility
   showVideo?: boolean;
   github: string;
   link: string;
@@ -22,6 +23,74 @@ interface Project {
 
 
 const projects = [
+  {
+    name: "TestBuilder Platform",
+    description: [
+      "Engineered a comprehensive test creation and management platform using Next.js 14 with App Router, enabling educators to create, manage, and distribute assessments with a 90% reduction in setup time.",
+      "Implemented a drag-and-drop module system and real-time collaboration features using Supabase, allowing for dynamic test construction and instant updates across multiple users.", 
+      "Developed an automated scoring system and analytics dashboard, providing detailed insights into test performance and reducing grading time by 85% compared to manual methods.",
+    ],
+    video: "/testbuilder.mp4",
+    showVideo: true,
+    github: "",
+    link: "",
+    skills: [
+      { skill: "Next.js 14" },
+      { skill: "TypeScript" },
+      { skill: "Supabase" },
+      { skill: "PostgreSQL" },
+      { skill: "Tailwind CSS" },
+      { skill: "shadcn/ui" },
+    ],
+  },
+
+  {
+    name: "AI-Powered Presales Management Platform (Neoris)",
+    description: [
+      "Developed a full-stack AI solution to streamline presales software workflows, leveraging PostgreSQL, Supabase, Langchain, and vector embeddings with pg_vector for RAG (Retrieval-Augmented Generation), integrated with Ollama for LLMs.",
+      "Built a robust frontend using Next.js and TypeScript, while focusing on advanced backend engineering with PostgreSQL, including procedures, triggers, RLS, and Supabase Storage for file management.",
+      "Collaborated within an Agile team to enhance performance and security, actively participating in sprint planning, iterative development, and team reviews. Integrated Microsoft Teams API for seamless collaboration.",
+    ],
+    videos: [
+      "/AIProject.mov",
+      "/Proposal.mov",
+      "/Teams_chat.mov",
+      "/Todo_list.mov"
+    ],
+    showVideo: true,
+    github: "https://github.com/CaarloosDC/Softie",
+    link: "",
+    skills: [
+      { skill: "Next.js" },
+      { skill: "TypeScript" },
+      { skill: "PostgreSQL" },
+      { skill: "Supabase" },
+      { skill: "Langchain" },
+      { skill: "RAG" },
+      { skill: "Ollama" },
+      { skill: "Agile Development" },
+      { skill: "Microsoft Teams API" },
+    ],
+  },
+  {
+    name: "Recursive AI",
+    description: [
+      "Engineered the frontend interface of a startup platform for AI Agents to create a hierarchy of tasks, delegating to multiple agents such as Sales, Recruiting and General.",
+      "Implemented a detailed view of each AI Agent's status and data using React, TypeScript, Next.js 15, and React Flow.",
+      "Built an intuitive drag-and-drop interface for task management and agent configuration, with real-time updates and state management.",
+    ],
+    video: "/recursive.mp4",
+    showVideo: true,
+    github: "",
+    link: "",
+    skills: [
+      { skill: "React" },
+      { skill: "TypeScript" },
+      { skill: "Next.js" },
+      { skill: "React Flow" },
+      { skill: "Tailwind CSS" },
+    ],
+  },
 
   {
     name: "Spatial Computing learning Platform for Medical Students",
@@ -44,28 +113,28 @@ const projects = [
       { skill: "Oracle Cloud Infrastructure" },
     ],
   },
+
   {
-    name: "AI-Powered Presales Management Platform (Neoris)",
+    name: "PlayVision Landing Page",
     description: [
-      "Developed a full-stack AI solution to streamline presales software workflows, leveraging PostgreSQL, Supabase, Langchain, and vector embeddings with pg_vector for RAG (Retrieval-Augmented Generation), integrated with Ollama for LLMs.",
-      "Built a robust frontend using Next.js and TypeScript, while focusing on advanced backend engineering with PostgreSQL, including procedures, triggers, RLS, and Supabase Storage for file management.",
-      "Collaborated within an Agile team to enhance performance and security, actively participating in sprint planning, iterative development, and team reviews. Integrated Microsoft Teams API for seamless collaboration.",
+      "Developed and Designed PlayVision's landing page using Next.js, TypeScript, and Tailwind CSS, featuring interactive team cards and dynamic scroll-based animations.",
+      "Implemented key components including an auto-playing video showcase, custom UI elements with gradient animations, and a responsive navigation system.",
+      "Optimized performance through Next.js Image optimization and lazy loading while maintaining a modern, responsive design across all devices.",
     ],
-    image: "/neorisPhoto.png", // You'll need to replace this with the actual image path
-    github: "https://github.com/CaarloosDC/Softie", // Replace with actual GitHub link if available
-    link: "", // Replace with actual project link
+    video: "/playvision-vid.mp4", // You'll need to add this image to your public folder
+    showVideo: true, 
+    github: "https://playvision.io",
+    link: "https://playvision.io", // Update with actual link
     skills: [
       { skill: "Next.js" },
       { skill: "TypeScript" },
-      { skill: "PostgreSQL" },
-      { skill: "Supabase" },
-      { skill: "Langchain" },
-      { skill: "RAG" },
-      { skill: "Ollama" },
-      { skill: "Agile Development" },
-      { skill: "Microsoft Teams API" },
+      { skill: "Tailwind CSS" },
+      { skill: "React" },
+      { skill: "Animation" },
+      { skill: "Responsive Design" },
     ],
   },
+
 
 
   {
@@ -175,6 +244,8 @@ const projects = [
     link: "",
     skills: [{ skill: "HTML" }, { skill: "CSS" }, { skill: "React" }],
   },
+
+  
 ];
 
 const ProjectsSection = () => {
@@ -194,8 +265,27 @@ const ProjectsSection = () => {
                   {/* Media Container */}
                   <div className="w-full mb-8">
                     <Link href={project.link}>
-                      {project.showVideo && project.video ? (
-                        <div className="aspect-video w-full max-w-4xl mx-auto">
+                      {project.showVideo && project.videos ? (
+                        <div className="flex flex-col gap-8">
+                          <h1 className="text-4xl font-bold text-center">{project.name}</h1>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            {project.videos.map((videoSrc, index) => (
+                              <div key={index} className="aspect-video w-full">
+                                <video
+                                  autoPlay
+                                  muted
+                                  loop
+                                  playsInline
+                                  className="rounded-xl shadow-xl hover:opacity-70 w-full h-full object-contain">
+                                  <source src={videoSrc} type="video/mp4" />
+                                  Your browser does not support the video tag.
+                                </video>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      ) : project.showVideo && project.video ? (
+                        <div className="aspect-video w-full max-w-3xl mx-auto">
                           <video
                             autoPlay
                             muted
