@@ -26,10 +26,9 @@ const projects = [
   {
     name: "TestBuilder Platform",
     description: [
-      "Engineered a comprehensive test creation and management platform using Next.js 14 with App Router, enabling educators to create, manage, and distribute assessments with a 90% reduction in setup time.",
-      "Implemented a drag-and-drop module system and real-time collaboration features using Supabase, allowing for dynamic test construction and instant updates across multiple users.", 
-      "Developed an automated scoring system and analytics dashboard, providing detailed insights into test performance and reducing grading time by 85% compared to manual methods.",
-    ],
+      "Developed a comprehensive test management platform using Next.js 14, TypeScript, and Supabase, enabling organizations to create, assign, and evaluate assessments through an intuitive interface.",
+      "Implemented real-time test building functionality with drag-and-drop module management, dynamic question types (multiple-choice, true/false, open-ended), and automated grading capabilities.",
+      "Developed a scalable testing platform with group assignments and customizable templates using Tailwind CSS and shadcn/ui, implemented React API for notifications and secure authentication, delivering streamlined experience for administrators and test-takers.",
     video: "/testbuilder.mp4",
     showVideo: true,
     github: "",
@@ -41,6 +40,7 @@ const projects = [
       { skill: "PostgreSQL" },
       { skill: "Tailwind CSS" },
       { skill: "shadcn/ui" },
+      { skill: "React Query" },
     ],
   },
 
