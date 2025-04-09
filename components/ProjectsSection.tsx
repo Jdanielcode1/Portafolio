@@ -29,6 +29,7 @@ const projects = [
       "Developed a comprehensive test management platform using Next.js 14, TypeScript, and Supabase, enabling organizations to create, assign, and evaluate assessments through an intuitive interface.",
       "Implemented real-time test building functionality with drag-and-drop module management, dynamic question types (multiple-choice, true/false, open-ended), and automated grading capabilities.",
       "Developed a scalable testing platform with group assignments and customizable templates using Tailwind CSS and shadcn/ui, implemented React API for notifications and secure authentication, delivering streamlined experience for administrators and test-takers.",
+    ],
     video: "/testbuilder.mp4",
     showVideo: true,
     github: "",
