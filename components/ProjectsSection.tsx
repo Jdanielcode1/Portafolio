@@ -23,27 +23,7 @@ interface Project {
 
 
 const projects = [
-  {
-    name: "MediAgent - Medical Device Sales Platform",
-    description: [
-      "Developed a comprehensive SaaS platform for medical device sales teams using Next.js, TypeScript, and Supabase, featuring interactive dashboards with real-time sales metrics, lead tracking, and revenue forecasting for products like WoundTrack Pro.",
-      "Implemented an AI-powered lead generation system that identifies and qualifies healthcare prospects based on specific criteria, with detailed lead profiles containing company information, contact details, and match scores to optimize sales targeting.",
-      "Created a personalized email generation system that automatically drafts outreach messages based on lead data, while building a responsive UI with Tailwind CSS and shadcn/ui components for seamless cross-device experience.",
-    ],
-    video: "/mediagent.mp4",
-    showVideo: true,
-    github: "",
-    link: "",
-    skills: [
-      { skill: "Next.js" },
-      { skill: "TypeScript" },
-      { skill: "Supabase" },
-      { skill: "PostgreSQL" },
-      { skill: "Tailwind CSS" },
-      { skill: "shadcn/ui" },
-      { skill: "AI Integration" },
-    ],
-  },
+
   {
     name: "TestBuilder Platform",
     description: [
@@ -63,6 +43,29 @@ const projects = [
       { skill: "Tailwind CSS" },
       { skill: "shadcn/ui" },
       { skill: "React Query" },
+    ],
+  },
+
+  {
+    name: "MediAgent - Medical Device Sales Platform",
+    description: [
+      "Developed a comprehensive SaaS platform for medical device sales teams using Next.js, TypeScript, and Supabase, featuring interactive dashboards with real-time sales metrics, lead tracking, and revenue forecasting for products like WoundTrack Pro.",
+      "Implemented an AI-powered lead generation system that identifies and qualifies healthcare prospects based on specific criteria, with detailed lead profiles containing company information, contact details, and match scores to optimize sales targeting.",
+      "Created a personalized email generation system that automatically drafts outreach messages based on lead data, while building a responsive UI with Tailwind CSS and shadcn/ui components for seamless cross-device experience.",
+    ],
+    video: "/mediagent.mp4",
+    showVideo: true,
+    github: "https://github.com/Jdanielcode1/MediAgent",
+    link: "https://medi-agent-eight.vercel.app/",
+    skills: [
+      { skill: "Next.js" },
+      { skill: "TypeScript" },
+      { skill: "Supabase" },
+      { skill: "PostgreSQL" },
+      { skill: "Tailwind CSS" },
+      { skill: "shadcn/ui" },
+      { skill: "AI Integration" },
+      { skill: "Vercel" },
     ],
   },
 
