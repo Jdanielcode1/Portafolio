@@ -11,6 +11,7 @@ interface Skill {
 
 interface Project {
   name: string;
+  id: string;
   description: string | string[];
   image?: string;
   videos?: string[];  // New field for multiple videos
@@ -26,6 +27,7 @@ const projects = [
 
   {
     name: "TestBuilder Platform",
+    id: "testbuilder",
     description: [
       "Developed a comprehensive test management platform using Next.js 14, TypeScript, and Supabase, enabling organizations to create, assign, and evaluate assessments through an intuitive interface.",
       "Implemented real-time test building functionality with drag-and-drop module management, dynamic question types (multiple-choice, true/false, open-ended), and automated grading capabilities.",
@@ -48,6 +50,7 @@ const projects = [
 
   {
     name: "MediAgent - Medical Device Sales Platform",
+    id: "mediagent",
     description: [
       "Developed a comprehensive SaaS platform for medical device sales teams using Next.js, TypeScript, and Supabase, featuring interactive dashboards with real-time sales metrics, lead tracking, and revenue forecasting for products like WoundTrack Pro.",
       "Implemented an AI-powered lead generation system that identifies and qualifies healthcare prospects based on specific criteria, with detailed lead profiles containing company information, contact details, and match scores to optimize sales targeting.",
@@ -71,6 +74,7 @@ const projects = [
 
   {
     name: "AI-Powered Presales Management Platform (Neoris)",
+    id: "neoris",
     description: [
       "Developed a full-stack AI solution to streamline presales software workflows, leveraging PostgreSQL, Supabase, Langchain, and vector embeddings with pg_vector for RAG (Retrieval-Augmented Generation), integrated with Ollama for LLMs.",
       "Built a robust frontend using Next.js and TypeScript, while focusing on advanced backend engineering with PostgreSQL, including procedures, triggers, RLS, and Supabase Storage for file management.",
@@ -99,6 +103,7 @@ const projects = [
   },
   {
     name: "Recursive AI",
+    id: "recursive",
     description: [
       "Engineered the frontend interface of a startup platform for AI Agents to create a hierarchy of tasks, delegating to multiple agents such as Sales, Recruiting and General.",
       "Implemented a detailed view of each AI Agent's status and data using React, TypeScript, Next.js 15, and React Flow.",
@@ -119,6 +124,7 @@ const projects = [
 
   {
     name: "Spatial Computing learning Platform for Medical Students",
+    id: "visiondoc",
     description: [
       "Developed an innovative VisionOS application for medical students, featuring 3D organ visualization and interactive quizzes.",
       "Utilized Swift, SwiftUI, RealityKit, and ARKit, with a MySQL backend and RESTful API for efficient data management.",
@@ -141,6 +147,7 @@ const projects = [
 
   {
     name: "PlayVision Landing Page",
+    id: "playvision",
     description: [
       "Developed and Designed PlayVision's landing page using Next.js, TypeScript, and Tailwind CSS, featuring interactive team cards and dynamic scroll-based animations.",
       "Implemented key components including an auto-playing video showcase, custom UI elements with gradient animations, and a responsive navigation system.",
@@ -164,6 +171,7 @@ const projects = [
 
   {
     name: "Video Processing Cloud Platform (YouTube Clone)",
+    id: "videoprocessing",
     description: [
       "Engineered a scalable video processing platform using Google Cloud services, implementing a microservices architecture with Cloud Storage, Pub/Sub, and Cloud Run for video handling and transcoding.",
       "Developed a responsive frontend using Next.js and TypeScript, integrated with Firebase Authentication for secure user management, and implemented Docker containerization for consistent deployment.",
@@ -192,6 +200,7 @@ const projects = [
 
   {
     name: "Github Issues Clone",
+    id: "githubissues",
     description: [
       "Created a Fullstack Github Issues Clone using NextJS 14, Supabase with PostgreSQL as a Backend Service utilizing, added realtime commments, AI semantic search for tickets, added file storage for view images with previews, multitenancy for different tenants, implemented Row Level Security to ensure data safety",
     ],
@@ -208,6 +217,7 @@ const projects = [
   },
   {
     name: "Regal Rexnord Risk Learning Website",
+    id: "regalrexnord",
     description:
       "Developed a workplace safety training platform featuring Unity/C# educational games integrated with a React/Material-UI analytics dashboard, utilizing Django backend for user authentication and game metrics processing.",
     image: "/RegalRexnordImage.png",
@@ -224,6 +234,7 @@ const projects = [
   },
   {
     name: "Order Management System (Subsidine)",
+    id: "subsidine",
     description: [
       "Developed a multi-tenant order management SaaS platform for food service providers, reducing order processing time by 75% and eliminating 95% of errors from lost physical tickets.",
       "Implemented a full-stack solution using NextJS, JavaScript, Supabase, PostgreSQL, and PostgREST, with realtime functionality for ticket creation and responsive design for cross-device compatibility.",
@@ -242,6 +253,7 @@ const projects = [
 
   {
     name: "Traffic Simulation to improve local traffic ",
+    id: "traffic",
     description: [
       "Developed an advanced traffic simulation system using Python and Unity, combining data analysis with 3D visualization to model urban traffic patterns and optimize flow efficiency in real-time.",
       "Implemented AI-driven vehicle behavior and pathfinding algorithms in C#, along with Matplotlib visualizations for traffic density analysis, resulting in actionable insights for reducing congestion and improving traffic management",
@@ -260,6 +272,7 @@ const projects = [
 
   {
     name: "Expense Tracker",
+    id: "expensetracker",
     description: [
       "A dynamic expense tracking app that helps users monitor their finances through intuitive data input and interactive bar graph visualizations. Features include monthly expense breakdowns, customizable date filtering, and spending pattern analysis.",
       "Built with React hooks for state management and Chart.js for data visualization, focusing on responsive design and user experience.",
@@ -284,7 +297,7 @@ const ProjectsSection = () => {
       <div className="flex flex-col space-y-28">
         {projects.map((project, idx) => {
           return (
-            <div key={idx}>
+            <div key={idx} id={project.id}>
               <SlideUp offset="-300px 0px -300px 0px">
                 <div className="flex flex-col items-center max-w-4xl mx-auto">
                   {/* Media Container */}
