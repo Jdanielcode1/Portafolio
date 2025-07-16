@@ -50,7 +50,7 @@ const HeroSection = () => {
               sequence={[
                 // Wait for previous animations
                 2000,
-                "a CS student",
+                "a CS student and software engineer",
                 500,
               ]}
               wrapper="span"
@@ -64,7 +64,7 @@ const HeroSection = () => {
               sequence={[
                 // Wait for previous animations
                 3000,
-                " based in Berkeley. Learning and creating software to make peoples life better.",
+                " from Monterrey interested in AI, iOS, and web technologies.",
                 1000,
               ]}
               wrapper="span"

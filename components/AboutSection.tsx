@@ -1,33 +1,44 @@
 
 import React from "react"
-import Image from "next/image"
 
-const skills = [
-  // Core Skills
-  { skill: "JavaScript" },
-  { skill: "TypeScript" },
-  { skill: "Python" },
-  { skill: "React" },
-  { skill: "Django" },
-  { skill: "Next.js" },
-  { skill: "Swift" },
-  { skill: "PostgreSQL" },
-  { skill: "Supabase" },
-  { skill: "Firebase" },
-  { skill: "HTML" },
-  { skill: "CSS" },
-  { skill: "Tailwind" },
-  { skill: "Docker" },
-  { skill: "Git" },
-  { skill: "Google Cloud" },
-  { skill: "Vercel" },
-  { skill: "React Native" },
-  { skill: "Expo" },
-  { skill: "C++" },
-  { skill: "SwiftUI" },
-  { skill: "Express.js" }
-
-];
+const techStack = {
+  Languages: [
+    "Swift",
+    "Python",
+    "JavaScript",
+    "TypeScript",
+    "Objective-C",
+    "SQL",
+    "C++"
+  ],
+  "Frameworks/Tools": [
+    "SwiftUI",
+    "Xcode",
+    "Next.js",
+    "PostgreSQL",
+    "Docker",
+    "TestFlight",
+    "Git/GitHub",
+    "Langchain",
+    "React Native",
+    "AVFoundation/Speech Framework",
+    "OpenAI API",
+    "Claude API",
+    "Google Cloud"
+  ],
+  Testing: [
+    "Cypress",
+    "Jest",
+    "Unit/Integration/E2E Testing"
+  ],
+  Other: [
+    "Agile/Scrum",
+    "Product Management",
+    "Figma",
+    "Jira",
+    "Slack"
+  ]
+};
 
 const AboutSection = () => {
   return (
@@ -44,8 +55,21 @@ const AboutSection = () => {
               Get to know me!
             </h1>
             <p>
-              I'm a Computer Science student at UC Berkeley who loves building 
-              things that make people's lives easier. I'm passionate about creating 
+              I'm a senior Computer Science student graduating in December 2025, 
+              and I've just finished my exchange semester at UC Berkeley. During my time at Berkeley, 
+              I got to build several MVPs and pitch to VCs, where I learned a lot about 
+              solving the right problems and building fast. I'm currently working as a 
+              Software Engineer intern on mobile for{" "}
+              <a 
+                href="https://banter.to/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-teal-600 hover:underline font-semibold"
+              >
+                Banter
+              </a>
+              , an AI Messenger startup. 
+              I love building things that make people's lives easier and I'm passionate about creating 
               innovative solutions and exploring new technologies.
             </p>
             <br />
@@ -64,20 +88,24 @@ const AboutSection = () => {
           </div>
           <div className="text-center md:w-1/2 md:text-left">
             <h1 className="text-2xl font-bold mb-6">My Tech Stack</h1>
-            <div className="flex flex-wrap flex-row justify-center z-10 md:justify-start">
-              {skills.map((item, idx) => {
-                return (
-                  <p
-                    key={idx}
-                    className="bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold"
-                  >
-                    {item.skill}
-                  </p>
-                );
-              })}
-              <div className="hidden md:block md:relative md:-bottom-10 md:left-15 md:z-0">
-                <Image src="/programmer1.svg" alt="" width={700} height={500} />
-              </div>
+            <div className="space-y-4">
+              {Object.entries(techStack).map(([category, skills]) => (
+                <div key={category}>
+                  <h2 className="text-lg font-semibold mb-2 text-gray-700 dark:text-gray-300">
+                    {category}:
+                  </h2>
+                  <div className="flex flex-wrap flex-row justify-center md:justify-start mb-4">
+                    {skills.map((skill, idx) => (
+                      <p
+                        key={idx}
+                        className="bg-gray-200 px-4 py-2 mr-2 mt-2 text-gray-500 rounded font-semibold"
+                      >
+                        {skill}
+                      </p>
+                    ))}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>

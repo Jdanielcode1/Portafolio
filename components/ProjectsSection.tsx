@@ -26,6 +26,52 @@ interface Project {
 const projects = [
 
   {
+    name: "Spatial Computing learning Platform for Medical Students",
+    id: "visiondoc",
+    description: [
+      "Developed an innovative VisionOS application for medical students, featuring 3D organ visualization and interactive quizzes.",
+      "Utilized Swift, SwiftUI, RealityKit, and ARKit, with a MySQL backend and RESTful API for efficient data management.",
+      "Collaborated with a multidisciplinary team to ensure accuracy and educational value.",
+      "Presented the project at the computer science program's 50th anniversary, demonstrating its potential impact on medical education.",
+    ],
+    video: "/vision_doc_vid.mp4", // Add this line
+    showVideo: true, // Add this line
+    github: "https://github.com/EugenioPedraza/VisionDoc",
+    link: "https://www.youtube.com/watch?v=tR1tP5SS5fU",
+    skills: [
+      { skill: "VisionOS" },
+      { skill: "SwiftUI" },
+      { skill: "Swift" },
+      { skill: "ARKit" },
+      { skill: "MySQL Server" },
+      { skill: "Oracle Cloud Infrastructure" },
+    ],
+  },
+
+  {
+    name: "iOS Voice-Controlled Charcoal Sales Assistant for Blind Elderly Entrepreneurs",
+    id: "voiceassistant",
+    description: [
+      "Currently building a voice-first iOS app with SwiftUI and SFSpeechRecognizer for blind entrepreneurs, integrating Claude API with MCP servers.",
+      "Implemented ConvexDB for real-time inventory sync and voice-controlled cash tracking (\"record sale: 2 bags, $40\").",
+      "Achieved 100% hands-free operation using AVAudioEngine and AVSpeechSynthesizer for continuous audio feedback.",
+    ],
+    image: "", // You can add an image later if available
+    github: "",
+    link: "",
+    skills: [
+      { skill: "SwiftUI" },
+      { skill: "iOS Development" },
+      { skill: "SFSpeechRecognizer" },
+      { skill: "Claude API" },
+      { skill: "MCP Servers" },
+      { skill: "ConvexDB" },
+      { skill: "AVAudioEngine" },
+      { skill: "AVSpeechSynthesizer" },
+    ],
+  },
+
+  {
     name: "TestBuilder Platform",
     id: "testbuilder",
     description: [
@@ -123,29 +169,6 @@ const projects = [
   },
 
   {
-    name: "Spatial Computing learning Platform for Medical Students",
-    id: "visiondoc",
-    description: [
-      "Developed an innovative VisionOS application for medical students, featuring 3D organ visualization and interactive quizzes.",
-      "Utilized Swift, SwiftUI, RealityKit, and ARKit, with a MySQL backend and RESTful API for efficient data management.",
-      "Collaborated with a multidisciplinary team to ensure accuracy and educational value.",
-      "Presented the project at the computer science program's 50th anniversary, demonstrating its potential impact on medical education.",
-    ],
-    video: "/vision_doc_vid.mp4", // Add this line
-    showVideo: true, // Add this line
-    github: "https://github.com/EugenioPedraza/VisionDoc",
-    link: "https://www.youtube.com/watch?v=tR1tP5SS5fU",
-    skills: [
-      { skill: "VisionOS" },
-      { skill: "SwiftUI" },
-      { skill: "Swift" },
-      { skill: "ARKit" },
-      { skill: "MySQL Server" },
-      { skill: "Oracle Cloud Infrastructure" },
-    ],
-  },
-
-  {
     name: "PlayVision Landing Page",
     id: "playvision",
     description: [
@@ -169,32 +192,6 @@ const projects = [
 
 
 
-  {
-    name: "Video Processing Cloud Platform (YouTube Clone)",
-    id: "videoprocessing",
-    description: [
-      "Engineered a scalable video processing platform using Google Cloud services, implementing a microservices architecture with Cloud Storage, Pub/Sub, and Cloud Run for video handling and transcoding.",
-      "Developed a responsive frontend using Next.js and TypeScript, integrated with Firebase Authentication for secure user management, and implemented Docker containerization for consistent deployment.",
-      "Built an event-driven video processing pipeline using FFmpeg for transcoding, Cloud Pub/Sub for message queuing, and Firestore for metadata management, ensuring reliable video processing and delivery.",
-    ],
-    image: "/yt_clone_logo2.png", // Add your project screenshot
-    github: "https://github.com/Jdanielcode1/Video-Processing-WebAPP-GC",
-    link: "", // Add if you have a live demo
-    skills: [
-      { skill: "Next.js" },
-      { skill: "TypeScript" },
-      { skill: "Google Cloud Platform" },
-      { skill: "Cloud Run" },
-      { skill: "Cloud Storage" },
-      { skill: "Cloud Pub/Sub" },
-      { skill: "Firebase" },
-      { skill: "Docker" },
-      { skill: "FFmpeg" },
-      { skill: "Express.js" },
-      { skill: "Microservices" },
-      { skill: "Event-Driven Architecture" },
-    ],
-  },
 
 
 
@@ -232,24 +229,6 @@ const projects = [
       { skill: "C#" },
     ],
   },
-  {
-    name: "Order Management System (Subsidine)",
-    id: "subsidine",
-    description: [
-      "Developed a multi-tenant order management SaaS platform for food service providers, reducing order processing time by 75% and eliminating 95% of errors from lost physical tickets.",
-      "Implemented a full-stack solution using NextJS, JavaScript, Supabase, PostgreSQL, and PostgREST, with realtime functionality for ticket creation and responsive design for cross-device compatibility.",
-      "Utilized Vercel and GitHub Actions for CI/CD, demonstrating expertise in modern web development, database management, and DevOps practices for a scalable SaaS startup.",
-    ],
-    image: "/subsidine_pic.png",
-    github: "https://github.com/EugenioPedraza/VisionDoc",
-    link: "https://www.youtube.com/watch?v=tR1tP5SS5fU",
-    skills: [
-      { skill: "Next.js" },
-      { skill: "TypeScript" },
-      { skill: "PostgreSQL" },
-      { skill: "Supabase" },
-    ],
-  },
 
   {
     name: "Traffic Simulation to improve local traffic ",
@@ -270,18 +249,6 @@ const projects = [
     ],
   },
 
-  {
-    name: "Expense Tracker",
-    id: "expensetracker",
-    description: [
-      "A dynamic expense tracking app that helps users monitor their finances through intuitive data input and interactive bar graph visualizations. Features include monthly expense breakdowns, customizable date filtering, and spending pattern analysis.",
-      "Built with React hooks for state management and Chart.js for data visualization, focusing on responsive design and user experience.",
-    ],
-    image: "/ExpenseTrackerImage.png",
-    github: "https://github.com/Jdanielcode1/Expense_Tracker",
-    link: "",
-    skills: [{ skill: "HTML" }, { skill: "CSS" }, { skill: "React" }],
-  },
 
   
 ];
